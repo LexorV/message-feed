@@ -25,33 +25,6 @@ export default {
             default: () => ({})
         }
     },
-    data() {
-        return {
-            countPosition: 0
-        }
-    },
-    methods: {
-        colorText(text, postTones) {
-            const textArr = text.split('');
-            let count = 0;
-            postTones.forEach((el) => {
-                console.log(el.position + el.length)
-                textArr.splice(el.position + count, 0, `<span :style="{color:'red'}">`)
-                textArr.splice(el.position + (count + 1) + el.length, 0, `</span>`)
-                count += 2
-
-            })
-            return textArr.join('')
-        },
-        filterPosition(text) {
-            this.countPosition = text.position + text.length
-            return this.messageData.content.slice(text.position, text.position + text.length)
-        }
-
-    },
-    mounted() {
-        ///console.log(this.colorText( this.messageData.content, this.messageData.contentPostTones ))
-    }
 }
 </script>
 
