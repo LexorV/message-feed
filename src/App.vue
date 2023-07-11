@@ -1,5 +1,5 @@
 <template>
-  <MessagesBoard msg="Welcome to Your Vue.js App"/>
+  <MessagesBoard/>
 </template>
 
 <script>
