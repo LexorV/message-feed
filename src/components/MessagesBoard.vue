@@ -1,6 +1,6 @@
 <template>
   <div class="board">
-    <h1>{{ msg }}</h1>
+    <h1>Лента сообщений</h1>
     <message v-for="message in mockData"
      :key="message.authorName + Math.random()"
      :message-data="message"
@@ -26,9 +26,6 @@ export default {
   props: {
     msg: String
   },
-  mounted () {
-    console.log(this.mockData[0])
-  }
 }
 </script>
 

@@ -52,10 +52,6 @@ export default {
             }
             this.textColor = this.text.slice(this.tones.position, this.tones.position + this.tones.length)
         },
-        notColorText() {
-            console.log(this.countPosition, this.contentPostTones[this.tonesIndex + 1].position)
-            return this.text.slice(this.countPosition, this.contentPostTones[this.tonesIndex + 1].position)
-        },
         colorFilter(tone) {
             let colorRed = 0;
             let colorGreen = 0;

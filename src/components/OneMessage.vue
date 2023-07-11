@@ -1,8 +1,8 @@
 <template>
     <li class="message">
         <div class="flex-box">
-            <div>Дата: {{ new Date(messageData.date) }}</div>
-            <div :style="{ color: 'red' }">Автор: {{ messageData.authorName }}</div>
+            <div>Дата: {{ new Date(messageData.date).toLocaleString() }}</div>
+            <div>Автор: {{ messageData.authorName }}</div>
         </div>
         <div class="flex-box">Сайт: {{ messageData.authorUrl }}</div>
         <div> Содержимое: <ContentText v-for="(tones, index) in messageData.contentPostTones"
